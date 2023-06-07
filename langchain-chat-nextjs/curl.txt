@@ -1,0 +1,2 @@
+curl -X POST -H "Content-Type: application/json" -d '{"question":"質問内容"}' http://localhost:3000/api/chat
+curl -X POST -H "Content-Type: application/json" -d '{"question":"describe about the repo"}' http://localhost:4000/api/chat
