@@ -42,15 +42,13 @@ def llamaChat(question):
 
   index = GPTVectorStoreIndex.from_documents(docs)
   index.storage_context.persist(persist_dir="data")
-  print(index)
-#   query_engine = index.as_query_engine()
-#   response = query_engine.query(question)
-  # response = index.query("Explain each LlamaIndex class?")
-#   return response.response
+  query_engine = index.as_query_engine()
+  response = query_engine.query(question)
+  return response.response
 
 # ans = llamaChat("describe atout the repo")
 # print(ans)
 
 # print(type(ans))
 # print(ans.response)
-llamaChat("")
+# llamaChat("")
